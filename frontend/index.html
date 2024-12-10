@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alysson Figueiredo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Menu -->
+  <header class="bg-green-400 text-white sticky top-0 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="flex items-center">
+        <!-- Logo com tamanho menor e mais destacada -->
+        <img src="logoalysson.png" alt="Logo" class="h-12 mr-2">
+       
+      </a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-green-700">Sobre Mim</a></li>
+          <li><a href="#modalidades" class="hover:text-green-700">Modalidades</a></li>
+          <li><a href="#agendar" class="hover:text-green-700">Agendar Consulta</a></li>
+          <li><a href="#anamnese" class="hover:text-green-700">Marcar Anamnese</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Sobre Mim -->
+  <section id="about" class="bg-white py-12 lg:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+      <!-- Imagem do perfil com mais destaque -->
+      <img class="w-56 h-56 rounded-full shadow-xl object-cover mb-8 lg:mb-0 lg:mr-16" src="perfilalysson.jpg" alt="Foto do Fisioterapeuta">
+      <div class="text-center lg:text-left">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Sobre Mim</h2>
+        <p class="text-lg text-gray-600 mb-6">Olá! Sou um fisioterapeuta apaixonado por ajudar pessoas a recuperar sua mobilidade e qualidade de vida. Especializado em técnicas modernas e personalizadas, meu objetivo é proporcionar a você uma experiência de cuidado única e acolhedora.</p>
+        <a href="#agendar" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-green-400 transition-all duration-300">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Modalidades -->
+  <section id="modalidades" class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Modalidades de Atendimento</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Fisioterapia Ortopédica</h3>
+                <p class="text-gray-600">Tratamento para lesões e problemas ósseos e musculares.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Pilates</h3>
+                <p class="text-gray-600">Exercícios para melhorar a postura e fortalecer o corpo.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Terapia Manual</h3>
+                <p class="text-gray-600">Técnicas manuais para alívio de dores e tensão muscular.</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Reabilitação Neurológica</h3>
+                <p class="text-gray-600">Tratamento especializado para distúrbios neurológicos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Seção Agendar Consulta -->
+  <section id="agendar" class="bg-white py-12 lg:py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Agendar Consulta</h2>
+      <form id="form-consulta" class="space-y-6">
+        <input type="text" class="w-full p-3 border border-gray-300 rounded-md" id="nome" placeholder="Nome" required>
+        <input type="email" class="w-full p-3 border border-gray-300 rounded-md" id="email" placeholder="Email" required>
+        <input type="text" class="w-full p-3 border border-gray-300 rounded-md" id="telefone" placeholder="Telefone" required>
+        <select class="w-full p-3 border border-gray-300 rounded-md" id="modalidade" required>
+          <option value="">Escolha a Modalidade</option>
+          <option value="Fisioterapia Ortopédica">Fisioterapia Ortopédica</option>
+          <option value="Pilates">Pilates</option>
+          <option value="Terapia Manual">Terapia Manual</option>
+          <option value="Reabilitação Neurológica">Reabilitação Neurológica</option>
+        </select>
+        <input type="date" class="w-full p-3 border border-gray-300 rounded-md" id="data" required>
+        <button type="submit" class="w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-400 transition-all duration-300">Agendar Consulta</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seção Marcar Anamnese -->
+  <section id="anamnese" class="bg-gray-50 py-12 lg:py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 mb-8">Marcar Anamnese</h2>
+      <form id="form-anamnese" class="space-y-6">
+        <input type="text" class="w-full p-3 border border-gray-300 rounded-md" id="nome" placeholder="Nome" required>
+        <input type="email" class="w-full p-3 border border-gray-300 rounded-md" id="email" placeholder="Email" required>
+        <input type="text" class="w-full p-3 border border-gray-300 rounded-md" id="telefone" placeholder="Telefone" required>
+        <textarea class="w-full p-3 border border-gray-300 rounded-md" id="motivo" rows="4" placeholder="Motivo da Anamnese" required></textarea>
+        <input type="date" class="w-full p-3 border border-gray-300 rounded-md" id="data" required>
+        <button type="submit" class="w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-400 transition-all duration-300">Marcar Anamnese</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-green-600 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+      <p class="text-xl font-semibold mb-4">Entre em Contato</p>
+      <div class="flex space-x-6 mb-6">
+        <!-- Email -->
+        <a href="mailto:seuemail@dominio.com" class="text-white hover:text-green-300">
+          <i class="fas fa-envelope fa-2x"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/dr.alyssonfig/" class="text-white hover:text-green-300">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5588981944109" class="text-white hover:text-green-300">
+          <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+        <!-- Telefone -->
+        <a href="tel:+5511999999999" class="text-white hover:text-green-300">
+          <i class="fas fa-phone-alt fa-2x"></i>
+        </a>
+      </div>
+      <p class="text-sm">&copy; 2024 Fisioterapeuta. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+     document.getElementById('consultaForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const modalidade = document.getElementById('modalidade').value;
+      const data = document.getElementById('data').value;
+
+      const response = await fetch('http://localhost:5000/marcar-consulta', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, telefone, modalidade, data }),
+      });
+
+      if (response.ok) {
+        alert('Consulta marcada com sucesso!');
+        carregarConsultas();  // Atualiza a lista de consultas
+      } else {
+        alert('Erro ao marcar consulta.');
+      }
+    });
+
+    // Função para carregar todas as consultas agendadas
+    async function carregarConsultas() {
+      const response = await fetch('http://localhost:5000/consultas');
+      const consultas = await response.json();
+
+      const lista = document.getElementById('consultasList');
+      lista.innerHTML = '';
+      consultas.forEach((consulta) => {
+        const item = document.createElement('li');
+        item.textContent = `${consulta.nome} - ${consulta.modalidade} - ${consulta.data}`;
+        lista.appendChild(item);
+      });
+    }
+
+
+    carregarConsultas();
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Consulta</title>
+</head>
+<body>
+
+  <h1>Agendar Consulta</h1>
+  <form id="consultaForm">
+    <input type="text" id="nome" placeholder="Nome" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="telefone" placeholder="Telefone" required>
+    <select id="modalidade" required>
+      <option value="">Escolha a Modalidade</option>
+      <option value="Fisioterapia Ortopédica">Fisioterapia Ortopédica</option>
+      <option value="Pilates">Pilates</option>
+      <option value="Terapia Manual">Terapia Manual</option>
+      <option value="Reabilitação Neurológica">Reabilitação Neurológica</option>
+    </select>
+    <input type="date" id="data" required>
+    <button type="submit">Marcar Consulta</button>
+  </form>
+
+  <h2>Consultas Agendadas</h2>
+  <ul id="consultasList"></ul>
+
+  <script>
+    // Função para enviar os dados do formulário para o backend
+    document.getElementById('consultaForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const modalidade = document.getElementById('modalidade').value;
+      const data = document.getElementById('data').value;
+
+      const response = await fetch('http://localhost:5000/marcar-consulta', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, telefone, modalidade, data }),
+      });
+
+      if (response.ok) {
+        alert('Consulta marcada com sucesso!');
+        carregarConsultas();  // Atualiza a lista de consultas
+      } else {
+        alert('Erro ao marcar consulta.');
+      }
+    });
+
+    // Função para carregar todas as consultas agendadas
+    async function carregarConsultas() {
+      const response = await fetch('http://localhost:5000/consultas');
+      const consultas = await response.json();
+
+      const lista = document.getElementById('consultasList');
+      lista.innerHTML = '';
+      consultas.forEach((consulta) => {
+        const item = document.createElement('li');
+        item.textContent = `${consulta.nome} - ${consulta.modalidade} - ${consulta.data}`;
+        lista.appendChild(item);
+      });
+    }
+
+    // Carrega as consultas ao iniciar
+    carregarConsultas();
+  </script>
+
+</body>
+</html>

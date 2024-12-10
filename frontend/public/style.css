@@ -1,0 +1,347 @@
+/* Reset Básico */
+body, h1, h2, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Seção Sobre Mim */
+  .minimal-about {
+    background-color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .about-content {
+    text-align: left;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .cta-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button:active {
+    transform: translateY(0);
+  }
+  
+  .minimal-about {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  /* Menu */
+  .menu {
+    background-color: white;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 50px; /* Altura reduzida */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu .logo img {
+    height: 30px; /* Altura menor para a logo */
+    width: auto;
+  }
+  
+  .menu nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .menu nav ul li {
+    margin-left: 15px; /* Menor espaçamento entre os itens */
+  }
+  
+  .menu nav ul li a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem; /* Fonte menor */
+    font-weight: 500;
+  }
+  
+  .menu nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Adicione uma transição suave para melhorar a experiência */
+  .menu {
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* Reduz ainda mais o menu em dispositivos pequenos */
+  @media (max-width: 768px) {
+    .menu {
+      height: 45px;
+      padding: 5px 10px;
+    }
+    .menu nav ul li {
+      margin-left: 10px;
+    }
+    .menu nav ul li a {
+      font-size: 0.8rem;
+    }
+  }
+  
+  
+  
+  /* Reset Básico */
+  body, h1, h2, p, ul, li, a, button, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  
+  }
+  
+  /* Menu */
+  .menu {
+    background-color: white;
+    color: rgb(92, 84, 84);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+  }
+  
+  .menu .logo img {
+    height: 30px;
+  }
+  
+  .menu nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .menu nav ul li {
+    margin-left: 15px;
+  }
+  
+  .menu nav ul li a {
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .menu nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Seção Sobre Mim */
+  .minimal-about {
+    background-color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 300%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .about-content {
+    text-align: left;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  
+  .cta-button {
+    background-color: #2f8f5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Seção Modalidades */
+  #modalidades {
+    padding: 40px 20px;
+    background-color: #ececdd;
+    
+  }
+  
+  #modalidades h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #modalidades ul {
+    list-style-type: none;
+    margin-left: 20px;
+  }
+  
+  #modalidades ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  /* Seção Agendar Consulta */
+  #agendar {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  #agendar form input, #agendar form select, #agendar form button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  #agendar form button {
+    background-color: #146438;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Seção Marcar Anamnese */
+  #anamnese {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  #anamnese form input, #anamnese form textarea, #anamnese form button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  #anamnese form button {
+    background-color: #146438;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Move a div para cima */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+  }
